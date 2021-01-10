@@ -1,7 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
+const TerserPlugin = require('terser-webpack-plugin')
 
 /*
  * SplitChunksPlugin is enabled by default and replaced
@@ -32,31 +32,37 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  devServer: {
+    port: 3000,
+    hot: true
+  },
+
   plugins: [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
 
   module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      include: [path.resolve(__dirname, 'src')],
-      loader: 'babel-loader'
-    }, {
-      test: /.css$/,
-
-      use: [{
-        loader: "style-loader"
-      }, {
-        loader: "css-loader",
-
-        options: {
-          sourceMap: true
+    rules: [
+      {
+        test: /.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
         }
-      }]
-    }]
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
   },
 
   optimization: {

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/app.js",
-    "build": "webpack --config webpack.config.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "webpack serve NODE_ENV=development",
     "test": "jest"
   },
   "repository": {
@@ -22,9 +23,11 @@
   "dependencies": {
     "express": "^4.17.1",
     "html-webpack-plugin": "^4.5.1",
+    "node-sass": "^5.0.0",
     "path": "^0.12.7",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "sass-loader": "^10.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -41,6 +44,7 @@
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.12.2",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
   }
 }

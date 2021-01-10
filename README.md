@@ -1,10 +1,9 @@
 # illusionalcoder-react-node
 A rewrite of illusionalcoder in html/css
-To run the app:
+To run the app in development:
 ```
 $ npm install
-$ npm run build
-$ npm start
+$ npm run dev
 ```
 
 $ npm -y init
@@ -49,3 +48,13 @@ In .babelrc, add another preset "@babel/preset-env"
 Create simple App.test
 Move App component to its own App.jsx
 $ npm run test
+
+Add webpack hot reloading plugin, HotModuleReplacementPlugin
+Make hot: true
+Change package.json script
+"start": "webpack --mode development --watch"
+$ npm install style-loader css-loader sass-loader node-sass
+$ npm install webpack-dev-server --save-dev
+Change package.json scripts to use node env
+"build": "NODE_ENV=production webpack",
+"dev": "webpack-dev-server --open NODE_ENV=development",
