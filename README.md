@@ -42,3 +42,10 @@ Copy into file
   ]
 }
 $ npm install --save-dev @babel/preset-react
+
+$ npm install --save-dev jest babel-jest @babel/preset-env react-test-renderer
+In package.json, add script "test": "jest"
+In .babelrc, add another preset "@babel/preset-env"
+Create simple App.test
+Move App component to its own App.jsx
+$ npm run test
