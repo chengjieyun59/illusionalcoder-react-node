@@ -7,7 +7,7 @@ $secondary-color: #0c7b93;
 $ternary-color: #00a8cc;
 
 html, body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", "Open Sans", "sans-serif";
   color: $text-color;
   a {
     color: $ternary-color;
@@ -18,13 +18,27 @@ html, body {
   }
 }
 
+#navbar {
+  height: 10vh;
+}
+
 .nav-li {
   color: $text-color;
-  letter-spacing: 0.1rem;
-  font-size: .7em;
+  letter-spacing: 0.2rem;
+  font-size: .8em;
   border-bottom: 2px solid clear;
   &:hover {
-    text-decoration-style: double;
-    border-bottom: 2px solid $primary-color;
+    border-bottom: 2px solid $secondary-color;
   }
+}
+
+h1 {
+  font-size: 4.5rem;
+  white-space: nowrap;
+  padding-top: 30vh;
+}
+
+h2 {
+  font-size: 1.5rem;
+  white-space: nowrap;
 }

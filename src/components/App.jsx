@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import { Nav } from 'react-bootstrap'
 
+import Header from './Header.jsx'
 import About from './About.jsx'
 import Contact from './Contact.jsx'
 import Projects from './Projects.jsx'
@@ -11,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar bg="light">
+        <Navbar id="navbar" bg="clear">
           <Navbar.Brand href="#">
             <img
               src="../../../assets/images/illusionalCoder-dark.png"
@@ -28,6 +29,8 @@ class App extends React.Component {
             <Nav.Link className="nav-li" href="#contact">CONTACT</Nav.Link>
           </Navbar.Collapse>
         </Navbar>
+
+        <Header />
 
         <a id="about"/>
         <About />
