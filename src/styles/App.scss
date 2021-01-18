@@ -20,25 +20,24 @@ html, body {
 
 #navbar {
   height: 10vh;
-}
-
-.nav-li {
-  color: $text-color;
-  letter-spacing: 0.2rem;
-  font-size: .8em;
-  border-bottom: 2px solid clear;
-  &:hover {
-    border-bottom: 2px solid $secondary-color;
+  .nav-li {
+    color: $text-color;
+    letter-spacing: 0.2rem;
+    font-size: .8em;
+    border-bottom: 2px solid clear;
+    &:hover {
+      color: $secondary-color;
+      border-bottom: 2px solid $secondary-color;
+    }
   }
 }
 
-h1 {
-  font-size: 4.5rem;
-  white-space: nowrap;
-  padding-top: 30vh;
+.section {
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
-h2 {
-  font-size: 1.5rem;
-  white-space: nowrap;
+h3 {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
 }
