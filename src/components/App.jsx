@@ -5,6 +5,7 @@ import { Nav } from 'react-bootstrap'
 import Header from './Header.jsx'
 import About from './About.jsx'
 import Contact from './Contact.jsx'
+import Skills from './Skills.jsx'
 import Projects from './Projects.jsx'
 import '../styles/App.scss'
 
@@ -34,6 +35,7 @@ class App extends React.Component {
 
         <a id="about"/>
         <About />
+        <Skills />
         <a id="projects"/>
         <Projects />
         <a id="contact"/>
